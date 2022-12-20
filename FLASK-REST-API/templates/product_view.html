@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <marquee behavior="slide" direction="left" scrollamount="3">
+        <h1 id="home">GET PRODUCT BY ID</h1>
+    </marquee>
+    <form id="form-nav" action="http://127.0.0.1:5000/map_product" method="post">
+        <p id="id">Enter ID: </p>
+        <p><input id="product-id" type="text" name="product-id" placeholder="Product ID: "></p>
+        <p><input type="submit" value="View Product" class="btn" id="submit"></p>
+        <p><a href="http://127.0.0.1:5000/"><input type="button" value="Home" id="home-btn"></a></p>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </form>
+
+{% endblock %}

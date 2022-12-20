@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <marquee behavior="slide" direction="up" scrollamount="5">
+        <h1 id="home">RENDERING PRODUCTS</h1>
+    </marquee>
+    <div id="form-nav-update">
+        {% for product in products %}
+            <marquee behavior="slide" direction="up" scrollamount="5">
+                <h3>Product {{ product.id }}</h3>
+                <p id="id-id" class="id-id">ID &raquo; <span class="span-id">{{ product.id }}</span> </p>
+                <p id="id-name" class="id-name">NAME &raquo; <span class="span-name">{{ product.name }}</span> </p>
+                <p id="id-description" class="id-description">DESCRIPTION &raquo; <span class="span-description">{{ product.description }}</span> </p>
+                <p id="id-price" class="id-price">PRICE &raquo; <span class="span-price">${{ product.price }}</span> </p>
+                <p id="id-quantity" class="id-quantity">QUANTITY &raquo; <span class="span-quantity">{{ product.qty }}</span> </p>
+            </marquee>
+        {% endfor %}
+        <p>
+            <a><input type="button" value="Conceal Products" id="hide-btn"></a>
+            <a href="http://127.0.0.1:5000/"><input type="button" value="Home" id="home-btn"></a>
+            <a><input type="button" value="Reveal Products" id="show-btn"></a>
+        </p>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jsonify.js') }}"></script>
+{% endblock %}

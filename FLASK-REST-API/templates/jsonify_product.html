@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <marquee behavior="slide" direction="up" scrollamount="5">
+        {% if md == "New Product" %}
+            <h1 id="home">NEW PRODUCT</h1>
+        {% elif md == "View Product" %}
+            <h1 id="home">VIEWING PRODUCT</h1>
+        {% elif md == "Delete Product" %}
+            <h1 id="home">DELETING PRODUCT</h1>
+        {% elif md == "Update Product" %}
+            <h1 id="home">UPDATING PRODUCT</h1>
+        {% endif %}
+    </marquee>
+    <div id="form-nav-update">
+        <marquee behavior="slide" direction="up" scrollamount="5">
+            <h3>Product {{ products.id }}</h3>
+            <p id="id-id" class="id-id">ID &raquo; <span class="span-id">{{ products.id }}</span> </p>
+            <p id="id-name" class="id-name">NAME &raquo; <span class="span-name">{{ products.name }}</span> </p>
+            <p id="id-description" class="id-description">DESCRIPTION &raquo; <span class="span-description">{{ products.description }}</span> </p>
+            <p id="id-price" class="id-price">PRICE &raquo; <span class="span-price">${{ products.price }}</span> </p>
+            <p id="id-quantity" class="id-quantity">QUANTITY &raquo; <span class="span-quantity">{{ products.qty }}</span> </p>
+        </marquee>
+        <p>
+            <a><input type="button" value="Conceal Products" id="hide-btn"></a>
+            <a href="http://127.0.0.1:5000/"><input type="button" value="Home" id="home-btn"></a>
+            <a><input type="button" value="Reveal Products" id="show-btn"></a>
+        </p>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jsonify.js') }}"></script>
+{% endblock %}

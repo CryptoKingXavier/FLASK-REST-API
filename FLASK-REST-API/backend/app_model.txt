@@ -1,0 +1,15 @@
+10:01:04.47 >>> Call to modelView in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app_model.py", line 44
+10:01:04.47 ...... id = 1
+10:01:04.47   44 | def modelView(id):
+10:01:04.51   45 |     print(f"ID: {modelGet(id).id}, Name: {modelGet(id).name}, Description: {modelGet(id).description}, Price: {modelGet(id).price}, Quantity: {modelGet(id).qty}")
+10:01:04.53 <<< Return value from modelView: None
+10:01:10.59 >>> Call to modelView in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app_model.py", line 44
+10:01:10.59 ...... id = 3
+10:01:10.59   44 | def modelView(id):
+10:01:10.60   45 |     print(f"ID: {modelGet(id).id}, Name: {modelGet(id).name}, Description: {modelGet(id).description}, Price: {modelGet(id).price}, Quantity: {modelGet(id).qty}")
+10:01:10.60 <<< Return value from modelView: None
+10:01:18.40 >>> Call to modelView in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app_model.py", line 44
+10:01:18.40 ...... id = 4
+10:01:18.40   44 | def modelView(id):
+10:01:18.40   45 |     print(f"ID: {modelGet(id).id}, Name: {modelGet(id).name}, Description: {modelGet(id).description}, Price: {modelGet(id).price}, Quantity: {modelGet(id).qty}")
+10:01:18.40 <<< Return value from modelView: None
