@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <marquee behavior="slide" direction="left" scrollamount="3">
+        <h1 id="home">CREATE PRODUCT</h1>
+    </marquee>
+    <form id="form-nav-update" action="http://{{host}}:{{port}}/new" method="post">
+        <p id="id-name">Enter Name: </p>
+        <p><input id="product-name" type="text" name="product-name" placeholder="Product Name: " required></p>
+        <p id="id-description">Enter Description: </p>
+        <p><input id="product-description" type="text" name="product-description" placeholder="Product Description: " required></p>
+        <p id="id-price">Enter Price: </p>
+        <p><input id="product-price" type="number" min="0" step="0.01" name="product-price" placeholder="Product Price: " required></p>
+        <p id="id-quantity">Enter Quantity: </p>
+        <p><input id="product-quantity" type="number" min="0" name="product-quantity" placeholder="Product Quantity: " required></p>
+        <p><input type="submit" value="Create New Product" class="btn" id="submit"></p>
+        <p><a href="http://{{host}}:{{port}}/"><input type="button" value="Home" id="home-btn"></a></p>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+    </form>
+
+{% endblock %}

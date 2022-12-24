@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div class="home-nav">
+        <h1 id="home">PRODUCT MENU</h1>
+        <button class="btn"><a id="product" href="http://{{host}}:{{port}}/new">New Product</a></button><br><br>
+        <button class="btn"><a id="product" href="http://{{host}}:{{port}}/map_product">View Product</a></button><br><br>
+        <button class="btn"><a id="product-del" href="http://{{host}}:{{port}}/delete">Delete Product</a></button><br><br>
+        <button class="btn"><a id="product" href="http://{{host}}:{{port}}/update">Update Product</a></button><br><br>
+        <button class="btn"><a id="products" href="http://{{host}}:{{port}}/products">View All Products</a></button>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </div>
+{% endblock %}

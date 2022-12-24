@@ -1,0 +1,123 @@
+body {
+    background-color: snow;
+    font-family: "Arial Helvetica", sans-serif;
+}
+
+.home-nav, #form-nav {
+    display: block;
+}
+
+.home-nav {
+    text-align: center;
+    border: 3px solid crimson;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 8rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 25px;
+}
+
+.home-nav button:last-child {
+    margin-bottom: 1rem;
+}
+
+#home {
+    color: crimson;
+    font-size: 50px;
+}
+
+#h2 {
+    color: crimson;
+}
+
+#home, #h2 {
+    text-align: center;
+}
+
+#products, #product, #id, #submit, #product-del, #id-id, #id-name, #id-description, #id-price, #id-quantity {
+    text-decoration: none;
+    color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn, #home-btn, #show-btn, #hide-btn {
+    border: 3px solid gold;
+    border-radius: 3px;
+    background-color: snow;
+}
+
+#home-btn, #show-btn, #hide-btn {
+    font-size: 20px;
+    color: crimson;
+    font-weight: bold;
+}
+
+#hide-btn {
+    margin-right: 1rem;
+}
+
+#show-btn {
+    margin-left: 1rem;
+}
+
+#form-nav, #form-nav-update {
+    border: 3px solid tomato;
+    margin-top: 3rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    background-color: lavender;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 25px;
+}
+
+#product-id::placeholder, #product-name::placeholder, #product-description::placeholder, #product-price::placeholder, #product-quantity::placeholder {
+    background-color: snow;
+    text-align: center;
+    color:crimson;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#product-id, #product-name, #product-description, #product-price, #product-quantity {
+    border: 1px solid gold;
+    border-radius: 3px;
+    height: 25px;
+    width: auto;
+}
+
+#form-nav-update {
+    margin-top: 0;
+}
+
+marquee {
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: tomato;
+    margin-left: 5rem;
+}
+
+span {
+    margin-left: 3rem;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border: 1px solid gold;
+    border-radius: 3px;
+}

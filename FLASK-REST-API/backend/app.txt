@@ -1,0 +1,51 @@
+22:20:59.34 >>> Call to get_products in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app.py", line 165
+22:20:59.34  165 | def get_products():
+22:20:59.34  166 |     if len(Product.query.all()) == 0:
+22:20:59.38  169 |         all_products = Product.query.all()
+22:20:59.39 .............. all_products = [<Product 1>]
+22:20:59.39 .............. len(all_products) = 1
+22:20:59.39  170 |         result = products_schema.dump(all_products)
+22:20:59.39 .............. result = [{'price': 500.99, 'qty': 5, 'name': 'Air Jordans', 'id': 1, ...}]
+22:20:59.39 .............. len(result) = 1
+22:20:59.39  171 |         return render_template("jsonify_products.html", title="Products Page", products=result, host=dbHost, port=dbPort)
+22:20:59.51 <<< Return value from get_products: '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <met.../static/js/jsonify.js"></script>\n\n</body>\n</html>'
+22:21:06.64 >>> Call to index in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app.py", line 63
+22:21:06.64   63 | def index():
+22:21:06.64   64 |     return render_template("index.html", title="Home Page", host=dbHost, port=dbPort)
+22:21:06.66 <<< Return value from index: '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <met...js/main.js"></script>\n    </div>\n\n</body>\n</html>'
+22:21:12.36 >>> Call to update in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app.py", line 107
+22:21:12.36  107 | def update():
+22:21:12.36  108 |     if request.method == 'POST':
+22:21:12.36  116 |         return render_template('product_update.html', title="Product Update Home", host=dbHost, port=dbPort)
+22:21:12.62 <<< Return value from update: '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <met...s/app.js"></script>\n    </form>\n\n\n</body>\n</html>'
+22:22:40.79 >>> Call to update in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app.py", line 107
+22:22:40.79  107 | def update():
+22:22:40.79  108 |     if request.method == 'POST':
+22:22:40.79  109 |         id = request.form['product-id']
+22:22:40.82 .............. id = '1'
+22:22:40.82  110 |         name = request.form['product-name']
+22:22:40.82 .............. name = 'Air Jordans'
+22:22:40.82  111 |         description = request.form['product-description']
+22:22:40.82 .............. description = 'LTS LTD Edition'
+22:22:40.82  112 |         price = request.form['product-price']
+22:22:40.83 .............. price = '500.99'
+22:22:40.83  113 |         qty = request.form['product-quantity']
+22:22:40.83 .............. qty = '5'
+22:22:40.83  114 |         return redirect(f'/product_update/{id}/{name}/{description}/{price}/{qty}')
+22:22:40.84 <<< Return value from update: <Response 301 bytes [302 FOUND]>
+22:22:40.89 >>> Call to product_update in File "C:\Users\HP\Desktop\Dev\FLASK-REST-API\app.py", line 96
+22:22:40.89 ...... id = '1'
+22:22:40.89 ...... name = 'Air Jordans'
+22:22:40.89 ...... description = 'LTS LTD Edition'
+22:22:40.89 ...... price = '500.99'
+22:22:40.89 ...... qty = '5'
+22:22:40.89   96 | def product_update(id, name, description, price, qty):
+22:22:40.89   97 |     product = Product.query.get(id)
+22:22:40.94 .......... product = <Product 1>
+22:22:40.94   98 |     product.name = name
+22:22:40.94   99 |     product.description = description
+22:22:40.95  100 |     product.price = price
+22:22:40.95  101 |     product.qty = qty
+22:22:40.95  102 |     db.session.commit()  # Committing to database
+22:22:41.21  103 |     return render_template("jsonify_product.html", products=product, md="Update Product", host=dbHost, port=dbPort)
+22:22:41.34 <<< Return value from product_update: '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <met.../static/js/jsonify.js"></script>\n\n</body>\n</html>'
